@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "gU80b0B7wUK8Tlkq6cBaRFlcruWPyHnFxmEKCdzkmEhQ/kt/qX0O4/kUxQzHb88Vlu3PGP4bhhEn5gHkHkcBGw==",
+  "dgSpecHash": "iRyMYxBCowWK6H4muhXCYX/yro9n8sPWRcq22kQCjudo6kfZHZAYuxCyy0sQ4xFLoK1Qa0NfWWB+f51SYAaoTg==",
   "success": true,
   "projectFilePath": "C:\\dev\\GHCP-UITesting\\SpecFlowProject.Tests\\SpecFlowProject.Tests.csproj",
   "expectedPackageFiles": [
@@ -36,6 +36,9 @@
     "C:\\Users\\frtheola\\.nuget\\packages\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
     "C:\\Users\\frtheola\\.nuget\\packages\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
     "C:\\Users\\frtheola\\.nuget\\packages\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
+    "C:\\Users\\frtheola\\.nuget\\packages\\selenium.support\\4.20.0\\selenium.support.4.20.0.nupkg.sha512",
+    "C:\\Users\\frtheola\\.nuget\\packages\\selenium.webdriver\\4.20.0\\selenium.webdriver.4.20.0.nupkg.sha512",
+    "C:\\Users\\frtheola\\.nuget\\packages\\selenium.webdriver.chromedriver\\124.0.6367.20100\\selenium.webdriver.chromedriver.124.0.6367.20100.nupkg.sha512",
     "C:\\Users\\frtheola\\.nuget\\packages\\specflow\\3.9.74\\specflow.3.9.74.nupkg.sha512",
     "C:\\Users\\frtheola\\.nuget\\packages\\specflow.internal.json\\1.0.8\\specflow.internal.json.1.0.8.nupkg.sha512",
     "C:\\Users\\frtheola\\.nuget\\packages\\specflow.nunit\\3.9.74\\specflow.nunit.3.9.74.nupkg.sha512",

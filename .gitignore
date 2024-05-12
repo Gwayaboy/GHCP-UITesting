@@ -1,0 +1,46 @@
+# .gitignore file for .NET Solution
+
+# Ignore .NET build files
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+[Oo]ut/
+
+# Ignore Visual Studio files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Ignore NuGet packages
+packages/
+
+# Ignore Resharper files
+_ReSharper*/
+*.[Rr]e[Ss]harper
+
+# Ignore Rider files
+.idea/
+
+# Ignore all files with .log extension
+*.log
+
+# Ignore all files with .bak extension
+*.bak
+
+# Ignore all files with .cache extension
+*.cache
+
+# Ignore all files with .tmp extension
+*.tmp
+
+# Ignore all files with .DS_Store extension
+*.DS_Store
