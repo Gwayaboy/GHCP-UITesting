@@ -14,7 +14,7 @@ GHCP Pratical demo in UI Test Automation
         So that I can place an order
     ```
     Add the following scenarios
-    - Adding a "Xbox Wireless Controller Black" to an empty cart
+    - Adding the first Xbox controller to an empty cart from https://cloudtesting.contosotraders.com/list/controllers
     - Viewing a cart that already has the first 5 products from the Product at API https://contoso-traders-productsctprd.eastus.cloudapp.azure.com/v1/Products
     - Increase and decrease test quantity of the last product item
     - Remove the first product item
