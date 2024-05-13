@@ -8,7 +8,8 @@ Scenario: Adding the "Xbox Wireless Controller Black" Xbox controller to an empt
 	When I add the "Xbox Wireless Controller Black" to my cart
 	Then the cart should contain the "Xbox Wireless Controller Black"
 
-#add the scenario Viewing a cart that already has the first 5 products from the Product at API https://contoso-traders-productsctprd.eastus.cloudapp.azure.com/v1/Products
+#add a scenario for viewing a cart that already has the first 5 products from the Product at API https://contoso-traders-productsctprd.eastus.cloudapp.azure.com/v1/Products
+
 
 
    
