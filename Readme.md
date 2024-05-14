@@ -30,12 +30,20 @@ GHCP Pratical demo in UI Test Automation
             
             add a scenario for "Viewing a cart a non-empty cart" the cart willhave the first 5 products from the Product  API at https://contoso-traders-productsctprd.eastus.cloudapp.azure.com/v1/Products
 
+        - can refine code asking to use the https://cloudtesting.contosotraders.com/product/detail/{productId} to navigate a specific product then add the product to shopping cart through the Web page.
+
     -  ```gherkin
         Scenario: Increase and decrease quantity of the last product item
         ``` 
-        - prompt:
-
-            add a scenario for "Increase "
+        - simply start by asking GHCP to add the scenario and work your way towards a potential outcome as follow:
+        ```gherkin
+        Scenario: Updating the quantity of an item in the cart
+            Given the shopping cart has the first 5 controllers
+            And the "Xbox Wireless Controller Black" quantity is 1
+            When I increase the quantity of the "Xbox Wireless Controller Black" 
+            Then the cart the "Xbox Wireless Controller Black" should be 2 
+            And the subtotal for the "Xbox Wireless Controller Black" should be 2x its unit price
+        ```
 
     -  ```gherkin
         Scenario: Remove the first product item
@@ -43,10 +51,6 @@ GHCP Pratical demo in UI Test Automation
 
 
 - Task 2: use GHCP to scaffold Specflow step definitions for the first 2 scenarios in Selenium and implement the navigation & interaction logic with elements on the page
-
-
-
-- Task 3: use GHCP to generate scaffolds steps in Selenium
 
 
 # Steps
