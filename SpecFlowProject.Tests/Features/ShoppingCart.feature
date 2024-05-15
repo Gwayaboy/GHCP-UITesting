@@ -13,7 +13,7 @@ Scenario: Adding the "Xbox Wireless Controller Black" Xbox controller to a non-e
 	When I add the "Xbox Wireless Controller Black" to my cart
 	Then the cart should display 6 controllers
 
-Scenario: Viewing a non-empty cart
+Scenario: Viewing the shopping cart with 5 first products
 	Given the shopping cart has the first 5 products
 	When I view my cart
 	Then the cart should display all 5 products each with Quantity of 1

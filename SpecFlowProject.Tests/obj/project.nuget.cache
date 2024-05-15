@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "h4HOSCgT/7YJY7F28QbWpp+ec+KydQteymthuym34zUIZd3judQ9JmbR8g2k3dUA0YwxSGPuy7rK/OWbLT7IyQ==",
+  "dgSpecHash": "+9EsaxoSZtx2TnwAm9toEBILdyGS4/Gqaz0Ft0I0NITf9nvbbKTWoi5BP3WDeS31g33SiiJmNBut7XgwP/z6dg==",
   "success": true,
-  "projectFilePath": "C:\\dev\\GHCP-UITesting\\SpecFlowProject.Tests\\SpecFlowProject.Tests.csproj",
+  "projectFilePath": "c:\\dev\\GHCP-UITesting\\SpecFlowProject.Tests\\SpecFlowProject.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\frtheola\\.nuget\\packages\\bodi\\1.5.0\\bodi.1.5.0.nupkg.sha512",
     "C:\\Users\\frtheola\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",

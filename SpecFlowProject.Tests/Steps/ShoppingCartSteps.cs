@@ -45,7 +45,7 @@ public class ShoppingCartSteps
         {
             var jsonString = await response.Content.ReadAsStringAsync();
             var jsonObject = JObject.Parse(jsonString);
-            _products = jsonObject["products"].Select(p => new Product(p["id"], p["name"], p["price"])).ToArray() ;            
+            _products = jsonObject["products"].Select(p => new Product((int)p["id"], (string)p["name"], (decimal)p["price"])).ToArray();            
            
             var wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(30));
             
