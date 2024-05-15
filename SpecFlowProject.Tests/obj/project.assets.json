@@ -5628,11 +5628,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\dev\\GHCP-UITesting\\SpecFlowProject.Tests\\SpecFlowProject.Tests.csproj",
+      "projectUniqueName": "c:\\dev\\GHCP-UITesting\\SpecFlowProject.Tests\\SpecFlowProject.Tests.csproj",
       "projectName": "SpecFlowProject.Tests",
-      "projectPath": "C:\\dev\\GHCP-UITesting\\SpecFlowProject.Tests\\SpecFlowProject.Tests.csproj",
+      "projectPath": "c:\\dev\\GHCP-UITesting\\SpecFlowProject.Tests\\SpecFlowProject.Tests.csproj",
       "packagesPath": "C:\\Users\\frtheola\\.nuget\\packages\\",
-      "outputPath": "C:\\dev\\GHCP-UITesting\\SpecFlowProject.Tests\\obj\\",
+      "outputPath": "c:\\dev\\GHCP-UITesting\\SpecFlowProject.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
@@ -5735,7 +5735,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

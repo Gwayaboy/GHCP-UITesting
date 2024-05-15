@@ -16,7 +16,7 @@ Scenario: Adding the "Xbox Wireless Controller Black" Xbox controller to a non-e
 Scenario: Viewing a non-empty cart
 	Given the shopping cart has the first 5 products
 	When I view my cart
-	Then the cart should display the 5 products
+	Then the cart should display all 5 products each with Quantity of 1
 	
 #add a scenario to Increase the quantity of an existing item in the shopping cart
 Scenario: Updating the quantity of an existing item in the shopping cart
