@@ -45,3 +45,5 @@ _ReSharper*/
 # Ignore all files with .DS_Store extension
 *.DS_Store
 .fake
+SpecFlowProject.Tests/obj/project.nuget.cache
+SpecFlowProject.Tests/obj/SpecFlowProject.Tests.csproj.nuget.dgspec.json
