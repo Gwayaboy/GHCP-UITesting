@@ -1,49 +1,15 @@
-# .gitignore file for .NET Solution
+# Maven target directory
+target/
 
-# Ignore .NET build files
-[Dd]ebug/
-[Dd]ebugPublic/
-[Rr]elease/
-[Rr]eleases/
-x64/
-x86/
-build/
-bld/
-[Bb]in/
-[Oo]bj/
-[Oo]ut/
-
-# Ignore Visual Studio files
-.vs/
-*.user
-*.suo
-*.userosscache
-*.sln.docstates
-
-# Ignore NuGet packages
-packages/
-
-# Ignore Resharper files
-_ReSharper*/
-*.[Rr]e[Ss]harper
-
-# Ignore Rider files
+# IntelliJ IDEA
 .idea/
+*.iml
 
-# Ignore all files with .log extension
+# VS Code
+.vscode/
+
+# Logs
 *.log
 
-# Ignore all files with .bak extension
-*.bak
-
-# Ignore all files with .cache extension
-*.cache
-
-# Ignore all files with .tmp extension
-*.tmp
-
-# Ignore all files with .DS_Store extension
-*.DS_Store
-.fake
-SpecFlowProject.Tests/obj/project.nuget.cache
-SpecFlowProject.Tests/obj/SpecFlowProject.Tests.csproj.nuget.dgspec.json
+# Playwright
+playwright-report/
