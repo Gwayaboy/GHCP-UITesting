@@ -4,77 +4,71 @@ import com.microsoft.playwright.*;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.AfterAll;
-import java.util.logging.Logger;
-import java.util.logging.Level;
+import io.cucumber.java.Before;
+import io.cucumber.java.After;
+import io.cucumber.java.DataTableType;
+
+import pages.ProductListPage;
+import pages.ProductViewModel;
+import pages.ShoppingCartPage;
+
+import java.util.List;
+import java.util.Map;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class ShoppingCartSteps {
-    private static final Logger logger = Logger.getLogger(ShoppingCartSteps.class.getName());
     private static Playwright playwright;
     private static Browser browser;
     private static BrowserContext context;
     private static Page page;
+    private static ProductListPage productListPage;
+    private static ShoppingCartPage shoppingCartPage;
+    private static List<ProductViewModel> expectedProducts;
 
-    @BeforeAll
+    @Before
     public static void setup() {
-        try {
-            logger.info("Setting up Playwright");
-            playwright = Playwright.create();
-            browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
-            context = browser.newContext();
-            page = context.newPage();
-            logger.info("Playwright setup complete");
-        } catch (Exception e) {
-            logger.log(Level.SEVERE, "Error during Playwright setup", e);
-        }
+        playwright = Playwright.create();
+        browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
+        context = browser.newContext();
+        page = context.newPage();
+        productListPage = new ProductListPage(page);
     }
 
-    @AfterAll
+    @After
     public static void teardown() {
-        try {
-            logger.info("Tearing down Playwright");
-            page.close();
-            context.close();
-            browser.close();
-            playwright.close();
-            logger.info("Playwright teardown complete");
-        } catch (Exception e) {
-            logger.log(Level.SEVERE, "Error during Playwright teardown", e);
+        page.close();
+        context.close();
+        browser.close();
+        playwright.close();
+    }
+
+    @Given("the shopping cart has 5 products")
+    public void shoppingCartHasFirst5Products(List<ProductViewModel> products) {
+
+        for (ProductViewModel product : products) {
+            productListPage
+                    .select(product)
+                    .addToCart();
         }
     }
 
-    @Given("I navigate to the Xbox controller list page")
-    public void navigateToXboxControllerListPage() {
-        try {
-            logger.info("Navigating to Xbox controller list page");
-            page.navigate("https://contoso-traders-ui2ct2025.azureedge.net/list/all-products");
-        } catch (Exception e) {
-            logger.log(Level.SEVERE, "Error navigating to Xbox controller list page", e);
-        }
+    @When("I view the shopping cart")
+    public void ViewShoppingCart() {
+        shoppingCartPage = productListPage.ViewShoppingCart();
+
     }
 
-    @When("I add the first Xbox controller to the cart")
-    public void addFirstXboxControllerToCart() {
-        try {
-            logger.info("Adding first Xbox controller to the cart");
-            page.click("css=div[title='Xbox Wireless Controller']");
-            page.click("css=button.CartButton");
-        } catch (Exception e) {
-            logger.log(Level.SEVERE, "Error adding first Xbox controller to the cart", e);
-        }
+    @Then("the shopping cart should contain the following products")
+    public void shoppingCartShouldContainProducts(List<ProductViewModel> products) {
+        List<ProductViewModel> actualProducts = shoppingCartPage.getItemsInCart();
+        assertEquals(expectedProducts, actualProducts);
     }
 
-    @Then("the cart should contain the Xbox controller")
-    public void verifyCartContainsXboxController() {
-        try {
-            logger.info("Verifying cart contains Xbox controller");
-            page.navigate("https://cloudtesting.contosotraders.com/cart");
-            boolean isVisible = page.isVisible("text='Xbox Wireless Controller'");
-            assertTrue(isVisible, "Xbox Wireless Controller is not visible in the cart");
-        } catch (Exception e) {
-            logger.log(Level.SEVERE, "Error verifying cart contains Xbox controller", e);
-        }
+    @DataTableType
+    public ProductViewModel productViewModelEntry(Map<String, String> entry) {
+        return new ProductViewModel(Integer.parseInt(entry.get("ID")), entry.get("Product Name"));
     }
+
 }
